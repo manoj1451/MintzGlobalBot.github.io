@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>Agent Conversation Panel</title>
+		<!--Links starts here-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="app/css/font-awesome.min.css">
+		<link href="app/css/botchat.css" rel="stylesheet"/>
+		<link rel="stylesheet" href="app/css/styles.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<style>
+		.searchbar::placeholder {
+			color: white;
+		}
+		input:focus{
+			outline: none;!important;
+		}
+		.format-markdown{
+		color:#fff;
+		}
+		
+		</style>
+	</head>
+	<body style="overflow:hidden;background: linear-gradient( rgba(23,25,27, 0.7), rgba(23,25,27, 0.7)), url(b1.jpeg);font-family: 'Lato', sans-serif;font-size:14px!important;">
+		<div class="wrapper">
+			<div class="container" style="top:40%;padding-left:0px;padding-right:0px;">
+				<!--<div class="left">
+					<div >
+						<ul class="people">
+							<li class="logo">
+								<img class="logoimage" src="logo.png" alt="" />
+							</li>
+						</ul>
+					</div>
+					<div id="search" style="font-weight: 300;margin-bottom:2px;">
+						<label class="searchlabel" style="    "><i class="fa fa-search" aria-hidden="true"></i></label>
+						<input type="text" placeholder="Search contacts..." class="searchbar">
+					</div>
+					 <ul class="people" >
+						 <li  class="person" data-chat="person2" id="bot-list">
+							<img src="boy.svg" alt="" style="width:16%;height:10%" />
+							<span class="name"style="">William</span>
+						 </li>
+					 </ul>
+				</div>-->
+				 <div class="right" id="bot-messages">
+					<div id="bot"></div>
+		 		 </div>
+			<div>
+		</div>
+		
+	
+		<script src="app/js/app.js"></script>
+		<script src="app/js/botchat.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+		<script src="https://cdn.rawgit.com/Luegg/angularjs-scroll-glue/master/src/scrollglue.js"></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js'></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+			integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+			crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+			integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+			crossorigin="anonymous"></script>
+		<script>
+		    BotChat.App({
+        directLine: {secret: '41lZSfgoceA.AsAwRUTFSCM1FMia2TNghdQYPih5xH9FIKjy87_uIyA'},
+//        directLine: {secret: '41lZSfgoceA.AsAwRUTFSCM1FMia2TNghdQYPih5xH9FIKjy87_uIyA'},// Archit'sdev.bot framework
+        user: {id: 'Manoj'},
+        bot: {id: '14f688e4-f481-46cd-8bb4-a46ce5c53397'},
+//        bot: {id: 'b74fd7d5-79a3-429d-a06f-87247e3fd250'},// Archit'sdev.bot framework
+        resize: 'detect'
+    }, document.getElementById("bot"));
+
+		        //$("#customer-messages").attr('style','display:none');
+		$("#bot-list").click(function(){
+        $("#customer-messages").hide();
+        $("#bot-messages").show();
+        });
+		var test=0;
+		$("#customer-list").click(function(){
+        $("#customer-messages").show();
+        $("#bot-messages").hide();
+            if(test==0){
+				setTimeout(function(){
+				$("#chatlog1").append("<div class='bubble you'>Hi</div>")
+				},1500);
+				test=1;
+			}
+    });
+
+		function placeHolder() {
+		  document.getElementById("chatbox").placeholder = "";
+		}
+		 $('form').submit(function(){
+					var inpu=[];
+		inpu=$('#m').val();
+
+			$('.chat').append('<div class="bubble me">'+$('#m').val()+'</div>');
+			});
+
+		nlp = window.nlp_compromise;
+		var messages = [], //array that hold the record of each string in chat
+		  lastUserMessage = "",
+		lastUserMessage1='',  //keeps track of the most recent input string from the user
+		  botMessage = "", //var keeps track of what the chatbot is going to say
+		  botName = '', //name of the chatbot
+		  talking = true; //when false the speach function doesn't work
+
+		function chatbotResponse(lastUserMessage) {
+
+		 talking = true;
+		  botMessage = "I'm confused"; 
+		  //the default message
+		  //style="overflow-y:scroll;height:500px;width:470px;"
+		  if (lastUserMessage === 'Hello Good Morning, How may I help you?') {
+			botMessage = 'I need help with my order status';
+		  }
+		  if (lastUserMessage === 'Can you please provide me Order Number') {
+			botMessage = '0000005013';
+		  
+		  }
+		  if (lastUserMessage === 'Your order is completely processed, let me know if you have any other questions') {
+			botMessage = 'I need help with my delievery status';
+		  }
+		  if (lastUserMessage === 'The delivery has been processed as well') {
+			botMessage = 'Thank you';
+		  }
+		   if (lastUserMessage === 'My pleasure! Let me know if you need anything else') {
+			botMessage = 'no';
+		  }
+		  if (lastUserMessage === 'Thanks, Have a great day') {
+			botMessage = 'Thank you';
+		  }
+		  
+		}
+
+		var UserInput=[];
+		var BotResponse=[];
+		var input=0;
+		function newEntry() {
+			
+		  if (document.getElementById("chatbox").value != "") {
+		   
+			UserInput.push(document.getElementById("chatbox").value);
+			chatbotResponse(document.getElementById("chatbox").value);
+			document.getElementById("chatbox").value = "";
+			
+			BotResponse.push(botMessage);
+			
+				$("#chatlog1").append("<div class='bubble me' >"+UserInput[input]+"</div>").animate({scrollTop:10000},0);
+				setTimeout(function(){
+		   
+				$("#chatlog1").append("<div class='bubble you'>"+BotResponse[input]+"</div>").animate({scrollTop:10000},0);
+				input++;
+				}, 1000);
+			  
+		  }
+		}
+
+		function Speech(say) {
+		  if ('speechSynthesis' in window && talking) {
+			var utterance = new SpeechSynthesisUtterance(say);
+			
+			speechSynthesis.speak(utterance);
+		  }
+		}
+
+		document.onkeypress = keyPress;
+
+		function keyPress(e) {
+		  var x = e || window.event;
+		  var key = (x.keyCode || x.which);
+		  if (key == 13 || key == 3) {
+		   
+			newEntry();
+		  }
+		  if (key == 38) {
+			console.log('hi')
+			 
+		  }
+		}
+		//clears the placeholder text ion the chatbox
+		//this function is set to run when the users brings focus to the chatbox, by clicking on it
+		function placeHolder() {
+		  document.getElementById("chatbox").placeholder = "";
+		}
+	</script>
+
+	</body>
+</html>

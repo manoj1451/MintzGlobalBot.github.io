@@ -1,0 +1,217 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "OrderBot",
+  "desc": "Bot which gives order status",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Capabilities"
+    },
+    {
+      "name": "conf_yes"
+    },
+    {
+      "name": "conformation"
+    },
+    {
+      "name": "delivery_ques"
+    },
+    {
+      "name": "greetings"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Thank you"
+    },
+    {
+      "name": "userquestion"
+    },
+    {
+      "name": "validnum"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": [
+    "number"
+  ],
+  "actions": [],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "hello",
+      "intent": "greetings",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "greetings",
+      "entities": []
+    },
+    {
+      "text": "nope",
+      "intent": "conformation",
+      "entities": []
+    },
+    {
+      "text": "ok",
+      "intent": "Thank you",
+      "entities": []
+    },
+    {
+      "text": "thank you",
+      "intent": "Thank you",
+      "entities": []
+    },
+    {
+      "text": "yeah",
+      "intent": "conf_yes",
+      "entities": []
+    },
+    {
+      "text": "1",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "yes",
+      "intent": "conf_yes",
+      "entities": []
+    },
+    {
+      "text": "no",
+      "intent": "conformation",
+      "entities": []
+    },
+    {
+      "text": "okay",
+      "intent": "Thank you",
+      "entities": []
+    },
+    {
+      "text": "no thanks",
+      "intent": "conformation",
+      "entities": []
+    },
+    {
+      "text": "hola",
+      "intent": "greetings",
+      "entities": []
+    },
+    {
+      "text": "k",
+      "intent": "Thank you",
+      "entities": []
+    },
+    {
+      "text": "yup",
+      "intent": "conf_yes",
+      "entities": []
+    },
+    {
+      "text": "bye",
+      "intent": "Thank you",
+      "entities": []
+    },
+    {
+      "text": "0123456789",
+      "intent": "validnum",
+      "entities": []
+    },
+    {
+      "text": "no thank you",
+      "intent": "conformation",
+      "entities": []
+    },
+    {
+      "text": "what can you do",
+      "intent": "Capabilities",
+      "entities": []
+    },
+    {
+      "text": "okay. thank you",
+      "intent": "Thank you",
+      "entities": []
+    },
+    {
+      "text": "how can you help me",
+      "intent": "Capabilities",
+      "entities": []
+    },
+    {
+      "text": "my order status",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "hai",
+      "intent": "greetings",
+      "entities": []
+    },
+    {
+      "text": "i need to know my order status",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "can i know the order status of the one which i'm looking for?",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "can you help me with my order status",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "i need the status of an order one",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "which kind of tasks can you perform",
+      "intent": "Capabilities",
+      "entities": []
+    },
+    {
+      "text": "i need to know my delivery status of one",
+      "intent": "delivery_ques",
+      "entities": []
+    },
+    {
+      "text": "i need my delivery status of two",
+      "intent": "delivery_ques",
+      "entities": []
+    },
+    {
+      "text": "what is the status of order one",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "show the delivery status of one",
+      "intent": "delivery_ques",
+      "entities": []
+    },
+    {
+      "text": "please pull the status of one",
+      "intent": "userquestion",
+      "entities": []
+    },
+    {
+      "text": "can you check for the delivery status of one",
+      "intent": "delivery_ques",
+      "entities": []
+    },
+    {
+      "text": "i need status of an delivery",
+      "intent": "delivery_ques",
+      "entities": []
+    }
+  ]
+}
