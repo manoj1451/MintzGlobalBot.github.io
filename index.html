@@ -15,6 +15,25 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 		<style>
+		.heading {
+    font-size: 25px;
+    font-weight: bold;
+    color: #FF8800;
+    line-height: 40px;
+  }
+.for-logo {
+
+    margin-top: 3%;
+
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .subheading {
+    font-size: 13px;
+    color: white;
+    font-weight: bold;
+  }
+
 		.searchbar::placeholder {
 			color: white;
 		}
@@ -27,28 +46,191 @@
 		
 		</style>
 	</head>
-	<body style="overflow:hidden;background: linear-gradient( rgba(23,25,27, 0.7), rgba(23,25,27, 0.7)), url(b1.jpeg);font-family: 'Lato', sans-serif;font-size:14px!important;">
+	<body style="overflow:hidden;background: linear-gradient( rgba(23,25,27, 0.7), rgba(23,25,27, 0.7)), url(b1.jpeg);background-position: center;background-size: cover;position: center;">
 		<div class="wrapper">
+		<div class="row">
+    <div class="col-md-12 for-logo">
+      <div class="heading">Screen Secure</div>
+      <div class="subheading">Screening and Background check</div>
+    </div>
+  </div>
 			<div class="container" style="top:40%;padding-left:0px;padding-right:0px;">
-				<!--<div class="left">
-					<div >
-						<ul class="people">
-							<li class="logo">
-								<img class="logoimage" src="logo.png" alt="" />
-							</li>
-						</ul>
-					</div>
-					<div id="search" style="font-weight: 300;margin-bottom:2px;">
-						<label class="searchlabel" style="    "><i class="fa fa-search" aria-hidden="true"></i></label>
-						<input type="text" placeholder="Search contacts..." class="searchbar">
-					</div>
-					 <ul class="people" >
-						 <li  class="person" data-chat="person2" id="bot-list">
-							<img src="boy.svg" alt="" style="width:16%;height:10%" />
-							<span class="name"style="">William</span>
-						 </li>
-					 </ul>
-				</div>-->
+			
+				
+				 <div class="right" id="bot-messages">
+					<div id="bot" onload="postUserId"><div data-reactroot="" class="wc-app"><div class="wc-chatview-panel"><div class="wc-header"><span>Agent Conversation Panel</span></div><div class="wc-message-pane show-actions"><div class="wc-message-groups"><div class="wc-message-group-content" style="margin-top: 324px;"><div data-activity-id="16FXJKDfs9H9krchpQKKqT-c|0000000" class="wc-message-wrapper list"><div class="wc-message wc-message-from-bot"><div class="wc-message-content"><svg class="wc-message-callout"><path class="point-left" d=""></path><path class="point-right" d=""></path></svg><div><div class="format-markdown"><p>Hi Chanakya, I am James - A virtual assistant to help Screen Secure verify references seamlessly and efficiently.I would like to conduct a simple verification for the candidate Uma manoj (<a href="mailto:manoj.uma2003@gmail.com" target="_blank">manoj.uma2003@gmail.com</a>).Can I proceed with this verification with you?.</p>
+</div><!-- react-empty: 39 --></div></div></div><div class="wc-message-from wc-message-from-bot"><span><!-- react-text: 42 -->ScreenSecureBot<!-- /react-text --><!-- react-text: 43 --> at 4:50:30 PM<!-- /react-text --></span></div></div></div></div><div class="wc-suggested-actions"><div><button class="scroll previous" disabled=""><svg><path d="M 16.5 22 L 19 19.5 L 13.5 14 L 19 8.5 L 16.5 6 L 8.5 14 L 16.5 22 Z"></path></svg></button><div class="wc-hscroll-outer"><div class="wc-hscroll" style="margin-bottom: -14px;"><ul><li><button type="button" title="Yes, Absolutely">Yes, Absolutely</button></li><li><button type="button" title="No, Some other time">No, Some other time</button></li></ul></div></div><button class="scroll next" disabled=""><svg><path d="M 12.5 22 L 10 19.5 L 15.5 14 L 10 8.5 L 12.5 6 L 20.5 14 L 12.5 22 Z"></path></svg></button></div></div></div><div class="wc-console"><div class="wc-textbox"><input type="text" class="wc-shellinput" value="" placeholder="Type your message"></div><label class="wc-send"><svg><path d="M26.5,1.9c-0.1-0.1-0.3-0.1-0.4-0.1L0.6,13.7c-0.1,0.1-0.2,0.2-0.2,0.4c0,0.2,0.1,0.3,0.2,0.4L7.8,18c0.1,0.1,0.3,0.1,0.4,0l7-5.3l-5.5,5.7c-0.1,0.1-0.1,0.2-0.1,0.3l0.5,7.2c0,0.2,0.1,0.3,0.3,0.3c0,0,0.1,0,0.1,0c0.1,0,0.2,0,0.3-0.1l3.8-4.4l4.7,2.3c0.1,0,0.2,0.1,0.3,0c0.1,0,0.2-0.1,0.2-0.2l6.7-21.3C26.7,2.2,26.7,2,26.5,1.9z" fill="#fff"></path></svg></label><label class="wc-mic hidden inactive"><svg width="28" height="22" viewBox="0 0 58 58"><path d="M 44 28 C 43.448 28 43 28.447 43 29 L 43 35 C 43 42.72 36.72 49 29 49 C 21.28 49 15 42.72 15 35 L 15 29 C 15 28.447 14.552 28 14 28 C 13.448 28 13 28.447 13 29 L 13 35 C 13 43.485 19.644 50.429 28 50.949 L 28 56 L 23 56 C 22.448 56 22 56.447 22 57 C 22 57.553 22.448 58 23 58 L 35 58 C 35.552 58 36 57.553 36 57 C 36 56.447 35.552 56 35 56 L 30 56 L 30 50.949 C 38.356 50.429 45 43.484 45 35 L 45 29 C 45 28.447 44.552 28 44 28 Z"></path><path id="micFilling" d="M 28.97 44.438 L 28.97 44.438 C 23.773 44.438 19.521 40.033 19.521 34.649 L 19.521 11.156 C 19.521 5.772 23.773 1.368 28.97 1.368 L 28.97 1.368 C 34.166 1.368 38.418 5.772 38.418 11.156 L 38.418 34.649 C 38.418 40.033 34.166 44.438 28.97 44.438 Z"></path><path d="M 29 46 C 35.065 46 40 41.065 40 35 L 40 11 C 40 4.935 35.065 0 29 0 C 22.935 0 18 4.935 18 11 L 18 35 C 18 41.065 22.935 46 29 46 Z M 20 11 C 20 6.037 24.038 2 29 2 C 33.962 2 38 6.037 38 11 L 38 35 C 38 39.963 33.962 44 29 44 C 24.038 44 20 39.963 20 35 L 20 11 Z"></path></svg></label></div></div></div></div>
+		 		 </div>
+			<div>
+		</div>
+		
+	
+		<script src="app/js/app.js"></script>
+		<script src="app/js/botchat.js"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+		<script src="https://cdn.rawgit.com/Luegg/angularjs-scroll-glue/master/src/scrollglue.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+		<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+		<script>
+		var params = BotChat.queryParams(name);
+		var userid=params['name']
+		    var user = { id: 'Manoj' };
+        var bot = { id: '14f688e4-f481-46cd-8bb4-a46ce5c53397' };
+	    window['botchatDebug'] = params['debug'] && params['debug'] === "true";
+	   var botConnection = new BotChat.DirectLine({
+            secret: '41lZSfgoceA.AsAwRUTFSCM1FMia2TNghdQYPih5xH9FIKjy87_uIyA',
+			resize: 'detect',
+          // token: params['t'],
+            //domain: params['domain'],
+            webSocket: params['webSocket'] === "true" // defaults to true
+        });
+	   
+	    BotChat.App({
+            botConnection: botConnection,
+            user: user,
+            bot: bot,
+        
+    }, document.getElementById("bot"));
+
+	
+	 const postUserId = () => {
+            botConnection
+                .postActivity({type: "event", value: x , from: {id: "me" }, name: "PageLoaded"})
+                .subscribe(id => console.log("success"));
+        }
+		
+		
+		        //$("#customer-messages").attr('style','display:none');
+		$("#bot-list").click(function(){
+        $("#customer-messages").hide();
+        $("#bot-messages").show();
+        });
+		var test=0;
+		$("#customer-list").click(function(){
+        $("#customer-messages").show();
+        $("#bot-messages").hide();
+            if(test==0){
+				setTimeout(function(){
+				$("#chatlog1").append("<div class='bubble you'>Hi</div>")
+				},1500);
+				test=1;
+			}
+    });
+
+		function placeHolder() {
+		  document.getElementById("chatbox").placeholder = "";
+		}
+		 $('form').submit(function(){
+					var inpu=[];
+		inpu=$('#m').val();
+
+			$('.chat').append('<div class="bubble me">'+$('#m').val()+'</div>');
+			});
+
+		nlp = window.nlp_compromise;
+		var messages = [], //array that hold the record of each string in chat
+		  lastUserMessage = "",
+		lastUserMessage1='',  //keeps track of the most recent input string from the user
+		  botMessage = "", //var keeps track of what the chatbot is going to say
+		  botName = '', //name of the chatbot
+		  talking = true; //when false the speach function doesn't work
+
+		function chatbotResponse(lastUserMessage) {
+
+		 talking = true;
+		  botMessage = "I'm confused"; 
+		  //the default message
+		  //style="overflow-y:scroll;height:500px;width:470px;"
+		  if (lastUserMessage === 'Hello Good Morning, How may I help you?') {
+			botMessage = 'I need help with my order status';
+		  }
+		  if (lastUserMessage === 'Can you please provide me Order Number') {
+			botMessage = '0000005013';
+		  
+		  }
+		  if (lastUserMessage === 'Your order is completely processed, let me know if you have any other questions') {
+			botMessage = 'I need help with my delievery status';
+		  }
+		  if (lastUserMessage === 'The delivery has been processed as well') {
+			botMessage = 'Thank you';
+		  }
+		   if (lastUserMessage === 'My pleasure! Let me know if you need anything else') {
+			botMessage = 'no';
+		  }
+		  if (lastUserMessage === 'Thanks, Have a great day') {
+			botMessage = 'Thank you';
+		  }
+		  
+		}
+
+		var UserInput=[];
+		var BotResponse=[];
+		var input=0;
+		function newEntry() {
+			
+		  if (document.getElementById("chatbox").value != "") {
+		   
+			UserInput.push(document.getElementById("chatbox").value);
+			chatbotResponse(document.getElementById("chatbox").value);
+			document.getElementById("chatbox").value = "";
+			
+			BotResponse.push(botMessage);
+			
+				$("#chatlog1").append("<div class='bubble me' >"+UserInput[input]+"</div>").animate({scrollTop:10000},0);
+				setTimeout(function(){
+		   
+				$("#chatlog1").append("<div class='bubble you'>"+BotResponse[input]+"</div>").animate({scrollTop:10000},0);
+				input++;
+				}, 1000);
+			  
+		  }
+		}
+
+		function Speech(say) {
+		  if ('speechSynthesis' in window && talking) {
+			var utterance = new SpeechSynthesisUtterance(say);
+			
+			speechSynthesis.speak(utterance);
+		  }
+		}
+
+		document.onkeypress = keyPress;
+
+		function keyPress(e) {
+		  var x = e || window.event;
+		  var key = (x.keyCode || x.which);
+		  if (key == 13 || key == 3) {
+		   
+			newEntry();
+		  }
+		  if (key == 38) {
+			console.log('hi')
+			 
+		  }
+		}
+		//clears the placeholder text ion the chatbox
+		//this function is set to run when the users brings focus to the chatbox, by clicking on it
+		function placeHolder() {
+		  document.getElementById("chatbox").placeholder = "";
+		}
+	</script>
+
+	
+</div></div></body>	<div class="wrapper">
+		<div class="row">
+    <div class="col-md-12 for-logo">
+      <div class="heading">Screen Secure</div>
+      <div class="subheading">Screening and Background check</div>
+    </div>
+  </div>
+			<div class="container" style="top:40%;padding-left:0px;padding-right:0px;">
+			
+				
 				 <div class="right" id="bot-messages">
 					<div id="bot" onload="postUserId"></div>
 		 		 </div>
@@ -96,7 +278,7 @@
 	
 	 const postUserId = () => {
             botConnection
-                .postActivity({type: "event", value: params , from: {id: "me" }, name: "PageLoaded"})
+                .postActivity({type: "event", value: x , from: {id: "me" }, name: "PageLoaded"})
                 .subscribe(id => console.log("success"));
         }
 		
