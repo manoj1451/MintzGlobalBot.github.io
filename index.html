@@ -54,7 +54,7 @@
       <div class="subheading">Screening and Background check</div>
     </div>
   </div>
-			<div class="container" style="top:40%;padding-left:0px;padding-right:0px;">
+			<div class="container" style="top:40%;">
 			
 				
 				 <div class="right" id="bot-messages">
@@ -78,11 +78,13 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 		<script>
 		var params = BotChat.queryParams(name);
-		var userid=params['name']
+		
 		    var user = { id: 'Manoj' };
+			
         var bot = { id: '14f688e4-f481-46cd-8bb4-a46ce5c53397' };
-	    window['botchatDebug'] = params['debug'] && params['debug'] === "true";
-	   var botConnection = new BotChat.DirectLine({
+	    //window['botchatDebug'] = params['debug'] && params['debug'] === "true";
+	  
+	  var botConnection = new BotChat.DirectLine({
             secret: '41lZSfgoceA.AsAwRUTFSCM1FMia2TNghdQYPih5xH9FIKjy87_uIyA',
 			resize: 'detect',
           // token: params['t'],
@@ -98,12 +100,16 @@
     }, document.getElementById("bot"));
 
 	
-	 const postUserId = () => {
-            botConnection
-                .postActivity({type: "event", value: x , from: {id: "me" }, name: "PageLoaded"})
-                .subscribe(id => console.log("success"));
-        }
-		
+	 botConnection
+            .postActivity({
+                from: user,
+                name: 'requestWelcomeDialog',
+                type: 'event',
+                value: params
+            })
+			.subscribe(function (id) {
+                console.log('"trigger requestWelcomeDialog" sent');
+            });
 		
 		        //$("#customer-messages").attr('style','display:none');
 		$("#bot-list").click(function(){
