@@ -83,7 +83,7 @@
 		
 		var params = BotChat.queryParams(location.search);
 		
-		//alert(JSON.stringify(params))
+		alert(JSON.stringify(params))
 		    var user = { id: 'Manoj' };
 			
         var bot = { id: '14f688e4-f481-46cd-8bb4-a46ce5c53397' };
@@ -92,8 +92,8 @@
 	  var botConnection = new BotChat.DirectLine({
             secret: '41lZSfgoceA.AsAwRUTFSCM1FMia2TNghdQYPih5xH9FIKjy87_uIyA',
 			resize: 'detect',
-           token: params['name'],
-            domain: params['domain'],
+           //token: params['name'],
+          //  domain: params['domain'],
             webSocket: params['webSocket'] && params['webSocket'] === "true" // defaults to true
         });
 	   
@@ -105,7 +105,7 @@
     }, document.getElementById("bot"));
 
 	var x= params['name'];
-	alert(x)
+	
         const postLoadMessage = () => {
 		alert('in postLoadMessage')
             botConnection
