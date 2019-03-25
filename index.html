@@ -104,8 +104,9 @@
         
     }, document.getElementById("bot"));
 
-	var x= JSON.parse(params);
-	alert(x)
+	var x= JSON.stringify(params);
+	var result=JSON.parse(x);
+	alert(result.name)
         const postLoadMessage = () => {
 		//alert('in postLoadMessage')
             botConnection
