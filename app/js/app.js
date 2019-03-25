@@ -1,4 +1,4 @@
-
+/* 
 $(document).ready(function () {
     $('.wc-header, .cust_rep').click(function () {
         $('.chat').addClass("active");
@@ -11,7 +11,7 @@ $(document).ready(function () {
         $('.chat_open_close').toggleClass("down")
     })
 });
-
+ */
 
 
 /* ANGULAR APPLICATION
