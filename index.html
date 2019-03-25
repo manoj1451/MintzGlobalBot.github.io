@@ -83,7 +83,7 @@
 		
 		var params = BotChat.queryParams(location.search);
 		
-		alert(params)
+		//alert(JSON.stringify(params))
 		    var user = { id: 'Manoj' };
 			
         var bot = { id: '14f688e4-f481-46cd-8bb4-a46ce5c53397' };
@@ -104,7 +104,8 @@
         
     }, document.getElementById("bot"));
 
-	var x= "my name is manoj";
+	var x= params['name'];
+	alert(x)
         const postLoadMessage = () => {
 		alert('in postLoadMessage')
             botConnection
