@@ -107,12 +107,12 @@
 	
 	var x= JSON.stringify(params);
 	var result=JSON.parse(x);
-	//alert(result.name)
+	//alert(result.oid)
 
         const postLoadMessage = () => {
-		alert('in postLoadMessage')
+		//alert('in postLoadMessage')
             botConnection
-                .postActivity({type: "event", value: result , from: {id: "me" }, name: "PageLoaded"})
+                .postActivity({type: "event", value: result.oid , from: {id: "me" }, name: "PageLoaded"})
                 .subscribe(id => console.log("success"));
 	}
 	 const postButtonMessage = () => {
