@@ -104,15 +104,17 @@
 
 	var x= "my name is manoj";
         const postLoadMessage = () => {
+		alert('in postLoadMessage')
             botConnection
                 .postActivity({type: "event", value: x , from: {id: "me" }, name: "PageLoaded"})
                 .subscribe(id => console.log("success"));
-	
+	}
 	 const postButtonMessage = () => {
+	 		alert('in postButtonMessage')
                 botConnection
                     .postActivity({type: "event", value: "", from: {id: "me" }, name: "buttonClicked"})
                     .subscribe(id => console.log("success"));
-		
+		}
 		        //$("#customer-messages").attr('style','display:none');
 		$("#bot-list").click(function(){
         $("#customer-messages").hide();
